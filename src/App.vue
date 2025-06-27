@@ -119,8 +119,8 @@ const calculateAge = handleSubmit((values) => {
 
 <template>
   <div class="bg-grey-300 h-screen overflow-auto flex flex-col justify-between">
-    <div class="container mx-auto my-auto mx-5 bg-white md:rounded-3xl md:rounded-br-[100px] max-w-3xl">
-      <div class="bg-white p-12 md:rounded-3xl md:rounded-br-[200px]">
+    <div class="container w-auto mx-5 md:mx-auto my-12 md:my-auto bg-white rounded-3xl rounded-br-[100px] md:max-w-3xl">
+      <div class="bg-white p-6 md:p-12 rounded-3xl rounded-br-[200px]">
         <form @submit="calculateAge">
           <div class="flex gap-x-4 mb-0">
             <NumberInput
@@ -155,20 +155,20 @@ const calculateAge = handleSubmit((values) => {
           <div class="flex items-center">
             <div class="h-[1px] w-full bg-grey-500"></div>
             <button type="submit"
-                    class="cursor-pointer bg-purple w-fit font-bold p-4 rounded-full text-white">
+                    class="cursor-pointer bg-purple w-fit font-bold p-2 md:p-4 rounded-full text-white">
               <img src="./assets/images/icon-arrow.svg" alt="arrow">
             </button>
           </div>
 
         </form>
-        <div class="p-8">
-          <div class="text-black text-8xl font-bold">
+        <div class="p-4 md:p-8">
+          <div class="text-black text-5xl md:text-8xl font-bold">
             <span class="text-purple">{{ typeof ageYears === 'number' ? animatedAgeYears  : '--' }}</span> years
           </div>
-          <div class="text-black text-8xl font-bold">
+          <div class="text-black text-5xl md:text-8xl font-bold">
             <span class="text-purple">{{ typeof ageMonths === 'number' ? animatedAgeMonths  : '--' }}</span> months
           </div>
-          <div class="text-black text-8xl font-bold">
+          <div class="text-black text-5xl md:text-8xl font-bold">
             <span class="text-purple">{{ typeof ageDays === 'number' ? animatedAgeDays  : '--' }}</span> days
           </div>
         </div>

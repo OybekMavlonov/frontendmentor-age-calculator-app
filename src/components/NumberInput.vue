@@ -70,7 +70,7 @@ const onKeyDown = (e) => {
           @input="onInput"
           @keydown="onKeyDown"
           :class="[inputClass, { '!border-red focus:outline-none focus:ring-red': errorMessage }]"
-          class="border text-2xl font-bold rounded-lg block w-40 p-4 transition duration-300"
+          class="border text-xl md:text-2xl font-bold rounded-lg block w-20 md:w-40 p-2 md:p-4 transition duration-300"
       />
       <slot name="prefix" />
       <slot name="suffix" />
