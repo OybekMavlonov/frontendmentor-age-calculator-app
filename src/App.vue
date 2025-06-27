@@ -16,7 +16,7 @@ configure({
 
 
 
-const {handleSubmit} = useForm({
+const {handleSubmit, errors} = useForm({
   validationSchema: toTypedSchema(
       object({
         day: string()
@@ -122,7 +122,7 @@ const calculateAge = handleSubmit((values) => {
     <div class="container w-auto mx-5 md:mx-auto my-12 md:my-auto bg-white rounded-3xl rounded-br-[100px] md:max-w-3xl">
       <div class="bg-white p-6 md:p-12 rounded-3xl rounded-br-[200px]">
         <form @submit="calculateAge">
-          <div class="flex gap-x-4 mb-0">
+          <div class="flex gap-x-4 transition-all duration-300 ease-in-out" :class="Object.keys(errors).length > 0 ? 'mb-8' : 'mb-0'">
             <NumberInput
                 label="Day"
                 placeholder="DD"
